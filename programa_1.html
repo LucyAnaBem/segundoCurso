@@ -1,0 +1,45 @@
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+var tela = document.querySelector('canvas'); //ambiente em canvas
+
+var pincel = tela.getContext('2d');
+
+// vou desenhar um retângulo de fundo:
+
+pincel.fillStyle = 'lightpink'
+pincel.fillRect(0,0,600,400);
+pincel.fillStyle = 'black';
+strokeRect(0,0,600,400);
+
+// agora. vou desenhar um retangulo menor, à esquerda do retangulo de fundo:
+
+pincel.fillStyle = 'red';
+pincel.fillRect(0,0,200,600);
+
+//retangulo à direita do retângulo de fundo:
+
+pincel.fillStyle ='darkred';
+pincel.fillRect(400,0,200,400);
+
+// desenho do triângulo;
+
+pincel.fillStyle ='darkorange';
+pincel.beginPath();
+pincel.moveTo(300,200);
+pincel.lineTo(200,400);
+pincel.lineTo(400,400);
+pincel.fill();
+
+//desenho do círculo:
+
+pincel.fillStyle = 'blue';
+pincel.beginPath();
+pincel.arc(300,150,50,0,2*3.14);
+pincel.fill();
+
+// Chamamos as instruções que as bibliotecas (APIs) deixam disponíveis para usarmos em nossos programas de métodos.
+
+</script>
