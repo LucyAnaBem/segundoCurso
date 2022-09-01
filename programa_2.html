@@ -1,0 +1,47 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+function desenhaQuadrado (x,y,cor) {
+
+var tela = document.querySelector('canvas');
+var pincel = tela.getContext('2d');
+
+pincel.fillStyle = cor;
+pincel.fillRect(x, y, 50, 50);
+pincel.strokeStyle = 'grey';
+pincel.strokeRect(x, y, 50, 50);
+
+}
+
+desenhaQuadrado(0,0,'lightgreen');
+desenhaQuadrado(0,50,'lightblue');
+desenhaQuadrado(0,100,'lightpink');
+
+function desenhaQuadrado (x,y,cor) {
+
+var tela = document.querySelector('canvas');
+var pincel = tela.getContext('2d');
+
+pincel.fillStyle = cor;
+pincel.fillRect(x, y, 50, 50);
+pincel.strokeStyle = 'gray';
+pincel.strokeRect(x, y, 50, 50);
+
+}
+
+desenhaQuadrado(50,50,'lightgreen');
+desenhaQuadrado(100,50,'lightpink');
+desenhaQuadrado(150,50,'lightblue');
+
+//Quando não se usa a função, o código fica extenso e repetitivo:
+
+//pincel.fillRect(50,0,50,50);
+//pincel.fillStroke = 'black';
+//pincel.strokeRect(50,0,50,50);
+
+//pincel.fillRect(100,0,50,50);
+//pincel.fillStroke = 'black';
+//pincel.strokeRect(100,0,50,50);
+
+</script>
